@@ -12,7 +12,7 @@ selected_y_var = st.selectbox(
 "What about the y?", ["bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g"],)
 penguin_file = st.file_uploader('Select Your Local Penguins CSV')
 
-
+@st.cache_data()
 def load_file(penguin_file):
     time.sleep(5)
     if penguin_file is not None:
